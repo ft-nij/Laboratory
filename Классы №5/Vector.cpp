@@ -6,12 +6,6 @@ Vector::Vector(void)
 	size = 0;
 	cur = 0;
 }
-//деструктор
-Vector::~Vector(void)
-{
-	if (beg != 0)delete[] beg;
-	beg = 0;
-}
 //конструктор с параметрами
 Vector::Vector(int n)
 {

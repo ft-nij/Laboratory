@@ -1,3 +1,4 @@
+#pragma once
 #include "object.h"
 #include <string>
 #include <iostream>
@@ -14,4 +15,4 @@ private:
 	Object** beg;//указатель на первый элемент вектора
 	int size;//размер
 	int cur;//текущая позиция
-};
+};

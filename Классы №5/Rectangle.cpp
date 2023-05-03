@@ -2,12 +2,10 @@
 // Конструктор без параметров
 Rectangle::Rectangle()
 {
-
 }
 // Конструктор с параметрами
-Rectangle::Rectangle(int f, int s)
+Rectangle::Rectangle(int f, int s) : Pair(f, s)
 {
-
 }
 Rectangle::Rectangle(const Rectangle& p)
 {
@@ -26,5 +24,11 @@ void Rectangle::Show()
 {
     cout << "\nFirst : " << first;
     cout << "\nSecond : " << second;
+    cout << "\nArea : " << first * second;
+    cout << "\nPerimetr : " << 2 * first + 2 * second;
     cout << "\n";
+}
+istream& operator>>(istream& in, Rectangle& p) {
+    in >> p.first >> p.second;
+    return in;
 }

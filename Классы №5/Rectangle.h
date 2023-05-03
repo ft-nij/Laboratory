@@ -1,5 +1,7 @@
+#pragma once
 // Производный класс Rectangle
 #include "Pair.h"
+#include <fstream>
 class Rectangle : public Pair
 {
 public:
@@ -10,4 +12,5 @@ public:
     void Show();//функция для просмотра атрибутов класса с помощью указателя
     int getArea(); // метод для вычисления площади
     int getPerimeter(); // метод для вычисления периметра
+    friend istream& operator>>(istream& in, Rectangle& p); // перегрузка операции ввода объекта
 };
